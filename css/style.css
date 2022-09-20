@@ -1,3 +1,16 @@
-
+.functioning__item {
+  display: flex;
+  align-items: center;
+}
+.functioning__item .number-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #9356dc;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
 
 /*# sourceMappingURL=style.css.map */
