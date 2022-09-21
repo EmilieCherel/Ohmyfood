@@ -1,5 +1,7 @@
 body {
   font-family: "Roboto", sans-serif;
+  max-width: 375px;
+  margin: auto;
 }
 
 h3 {
@@ -11,9 +13,58 @@ h4 {
   font-weight: 300;
 }
 
+.header__logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.location__bar {
+  text-align: center;
+  padding: 10px;
+  background-color: #e9e9e9;
+  box-shadow: inset 0px 2px 0px 0px #d6d6d6;
+}
+.location__bar i {
+  margin: 0px 10px;
+}
+.location__explore-button {
+  background-color: #ff79da;
+  color: white;
+  font-size: 12px;
+  padding: 15px;
+  border-radius: 30px;
+  border: transparent;
+}
+.location__test {
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 10px 50px 50px 50px;
+}
+.location__test p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.functioning {
+  padding: 30px 20px;
+}
+.functioning i {
+  margin: 0px 20px;
+  font-size: 18px;
+}
 .functioning__item {
   display: flex;
   align-items: center;
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 5px gainsboro;
+  border-radius: 30px;
+  background-color: #f6f6f6;
+  font-size: 12px;
+  padding: 15px 15px 15px 0px;
+  margin: 20px 15px;
+}
+.functioning__item h3 {
+  margin: 0;
 }
 .functioning__item .number-circle {
   display: flex;
@@ -21,21 +72,27 @@ h4 {
   justify-content: center;
   color: white;
   background-color: #9356dc;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
+  font-size: 15px;
+  margin-left: -15px;
 }
 
+.restaurant {
+  padding: 30px 20px;
+  background-color: #f4f4f4;
+}
 .restaurant__card {
-  width: 350px;
+  width: 335px;
   height: 250px;
   border: 1px solid transparent;
   box-shadow: 0px 2px 5px gainsboro;
   border-radius: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .restaurant__picture {
-  width: 350px;
+  width: 335px;
   height: 180px;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
@@ -54,6 +111,29 @@ h4 {
 .fa-heart {
   font-size: 25px;
   margin: 0px 30px;
+}
+
+.omf-footer {
+  background-color: black;
+  padding: 10px 20px;
+}
+.omf-footer i {
+  margin-right: 20px;
+  width: 12px;
+  height: 14px;
+}
+.omf-footer ul {
+  list-style-type: none;
+  padding: 0;
+  line-height: 30px;
+}
+.omf-footer a {
+  text-decoration: none;
+  color: white;
+}
+.omf-footer__heading {
+  font-family: "Shrikhand", sans-serif;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
