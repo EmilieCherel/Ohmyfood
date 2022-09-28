@@ -1,8 +1,14 @@
 .location__explore-button {
-  background-color: $color-secondary;
+  background: linear-gradient(
+    to bottom right,
+    $color-secondary,
+    $color-primary
+  );
+  text-decoration: none;
   color: white;
-  font-size: 12px;
+  font-size: 16px;
   padding: 15px;
   border-radius: 30px;
   border: transparent;
+  @include item-shadow; /*d0d0d0*/
 }

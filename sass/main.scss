@@ -1,20 +1,8 @@
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./base/base";
 @import "./components/buttons";
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./pages/home";
 @import "./pages/menu";
-//voir pour mettre une variable layout-margin, des maps également
-/*
-@import "./utils/functions";
-@import "./utils/mixins";
-@import "./utils/extensions";
-
-@import "./base/typography";
-
-
-@import "./layouts/nav";
-@import "./layouts/container";
-@import "./layouts/form";
-*/

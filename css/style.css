@@ -4,22 +4,16 @@ body {
   margin: auto;
 }
 
-h3 {
-  margin: 5px 10px;
-}
-
-h4 {
-  margin: 0px 10px 10px 10px;
-  font-weight: 300;
-}
-
 .location__explore-button {
-  background-color: #ff79da;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  text-decoration: none;
   color: white;
-  font-size: 12px;
+  font-size: 16px;
   padding: 15px;
   border-radius: 30px;
   border: transparent;
+  box-shadow: 0px 5px 5px #e8e8e8;
+  /*d0d0d0*/
 }
 
 header {
@@ -69,14 +63,15 @@ h1 {
 .location__bar i {
   margin: 0px 10px;
 }
-.location__test {
+.location__description {
   background-color: #f6f6f6;
   text-align: center;
   padding: 10px 50px 50px 50px;
 }
-.location__test p {
+.location__description p {
   font-size: 14px;
   font-weight: 300;
+  margin-bottom: 30px;
 }
 
 .functioning {
@@ -90,12 +85,18 @@ h1 {
   display: flex;
   align-items: center;
   border: 1px solid transparent;
-  box-shadow: 0px 2px 5px gainsboro;
-  border-radius: 30px;
+  box-shadow: 0px 5px 5px #e8e8e8;
+  border-radius: 15px;
   background-color: #f6f6f6;
   font-size: 12px;
   padding: 15px 15px 15px 0px;
   margin: 20px 15px;
+}
+.functioning__item:hover {
+  background-color: #f5edff;
+}
+.functioning__item:hover i {
+  color: #9356dc;
 }
 .functioning__item h3 {
   margin: 0;
@@ -125,7 +126,7 @@ h1 {
   width: 335px;
   height: 250px;
   border: 1px solid transparent;
-  box-shadow: 0px 2px 5px gainsboro;
+  box-shadow: 0px 5px 5px #e8e8e8;
   border-radius: 20px;
   margin-bottom: 20px;
 }
@@ -146,28 +147,131 @@ h1 {
   display: flex;
   flex-direction: column;
 }
+.restaurant__name {
+  margin: 5px 10px;
+}
+.restaurant__location {
+  margin: 0px 10px 10px 10px;
+  font-weight: 300;
+}
 
 .fa-heart {
   font-size: 25px;
   margin: 0px 30px;
 }
 
-.main__picture {
-  width: 100%;
-  height: auto;
+main {
+  background-color: #f6f6f6;
 }
 
-/*
-@import "./utils/functions";
-@import "./utils/mixins";
-@import "./utils/extensions";
+.main__picture {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
 
-@import "./base/typography";
+.menu-page {
+  position: relative;
+  bottom: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 30px 0px 30px;
+  background-color: #f6f6f6;
+  border: 1px solid transparent;
+  border-radius: 50px 50px 0px 0px;
+}
 
+.main__heading {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 25px;
+  margin: 10px 0px 10px -15px;
+}
 
-@import "./layouts/nav";
-@import "./layouts/container";
-@import "./layouts/form";
-*/
+.main__byline {
+  font-weight: 300;
+  padding-bottom: 5px;
+  margin-bottom: 0;
+}
+.main__byline--underline {
+  width: 45px;
+  height: 5px;
+  border-bottom: 4px solid #99e2d0;
+}
+
+.fa-circle-check {
+  display: none;
+}
+
+.meal {
+  display: flex;
+  align-content: stretch;
+  justify-content: space-between;
+  align-items: center;
+  width: 330px;
+  height: 70px;
+  background-color: white;
+  border: 0px solid transparent;
+  border-radius: 15px;
+  margin: 15px 0px;
+  padding-left: 15px;
+  box-shadow: 0px 5px 5px #e8e8e8;
+}
+.meal h4 {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.meal__price {
+  margin: 40px 20px 20px 0px;
+  font-weight: 500;
+}
+.meal__description {
+  line-height: 25px;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 60px);
+}
+.meal__description-byline {
+  font-weight: 300;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.meal__sidebar {
+  width: 0px;
+  height: 100%;
+  background-color: #99e2d0;
+  border-radius: 0px 15px 15px 0px;
+}
+.meal:hover .meal__description {
+  width: calc(100% - 130px);
+}
+.meal:hover .meal__sidebar {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.meal:hover .meal__sidebar i {
+  display: inline;
+  color: white;
+}
+
+.button__commander {
+  padding: 15px 50px;
+  margin: 40px 0px 0px 0px;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 30px;
+  border: transparent;
+  box-shadow: 0px 5px 5px #e8e8e8;
+}
 
 /*# sourceMappingURL=style.css.map */
