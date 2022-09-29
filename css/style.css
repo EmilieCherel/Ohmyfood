@@ -1,6 +1,5 @@
 body {
   font-family: "Roboto", sans-serif;
-  max-width: 375px;
   margin: auto;
 }
 @media screen and (min-width: 768px) {
@@ -39,8 +38,24 @@ h1 {
   color: black;
 }
 
-.omf-footer {
+.container {
+  max-width: 375px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: none;
+  }
+}
+
+footer {
   background-color: #353535;
+}
+
+.omf-footer {
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
@@ -305,7 +320,7 @@ main {
 @media screen and (min-width: 1024px) {
   .meal__section {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
   }
 }
