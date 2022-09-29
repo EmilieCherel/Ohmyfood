@@ -3,6 +3,11 @@ body {
   max-width: 375px;
   margin: auto;
 }
+@media screen and (min-width: 768px) {
+  body {
+    max-width: none;
+  }
+}
 
 .location__explore-button {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
@@ -13,7 +18,10 @@ body {
   border-radius: 30px;
   border: transparent;
   box-shadow: 0px 5px 5px #e8e8e8;
-  /*d0d0d0*/
+}
+.location__explore-button:hover {
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  box-shadow: 0px 8px 5px #9c9c9c;
 }
 
 header {
@@ -34,6 +42,18 @@ h1 {
 .omf-footer {
   background-color: black;
   padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .omf-footer {
+    align-items: center;
+  }
+}
+.omf-footer h2 {
+  margin-bottom: 0px;
+  align-items: flex-start;
 }
 .omf-footer i {
   margin-right: 20px;
@@ -44,6 +64,17 @@ h1 {
   list-style-type: none;
   padding: 0;
   line-height: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .omf-footer ul {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .omf-footer li {
+    margin: 10px;
+  }
 }
 .omf-footer a {
   text-decoration: none;
@@ -66,16 +97,41 @@ h1 {
 .location__description {
   background-color: #f6f6f6;
   text-align: center;
-  padding: 10px 50px 50px 50px;
+  padding: 10px 50px 70px 50px;
 }
 .location__description p {
   font-size: 14px;
   font-weight: 300;
   margin-bottom: 30px;
 }
+.location__description a {
+  margin-top: 30px;
+}
 
 .functioning {
   padding: 30px 20px;
+  background-color: white;
+}
+@media screen and (min-width: 768px) {
+  .functioning h2 {
+    text-align: center;
+  }
+}
+.functioning__test {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .functioning__test {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .functioning__test {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 .functioning i {
   margin: 0px 20px;
@@ -84,13 +140,14 @@ h1 {
 .functioning__item {
   display: flex;
   align-items: center;
+  width: 300px;
   border: 1px solid transparent;
   box-shadow: 0px 5px 5px #e8e8e8;
   border-radius: 15px;
   background-color: #f6f6f6;
   font-size: 12px;
   padding: 15px 15px 15px 0px;
-  margin: 20px 15px;
+  margin: 10px 15px;
 }
 .functioning__item:hover {
   background-color: #f5edff;
@@ -117,6 +174,31 @@ h1 {
 .restaurant {
   padding: 30px 20px;
   background-color: #f4f4f4;
+}
+@media screen and (min-width: 768px) {
+  .restaurant h2 {
+    text-align: center;
+  }
+}
+.restaurant__test {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .restaurant__test {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurant__test {
+    display: grid;
+    grid-template-rows: 250px 250px;
+    grid-template-columns: 335px 335px;
+    grid-gap: 30px 30px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
 }
 .restaurant__card-link {
   text-decoration: none;
@@ -247,6 +329,9 @@ main {
   background-color: #99e2d0;
   border-radius: 0px 15px 15px 0px;
 }
+.meal__sidebar i {
+  font-size: 22px;
+}
 .meal:hover .meal__description {
   width: calc(100% - 130px);
 }
@@ -272,6 +357,10 @@ main {
   border-radius: 30px;
   border: transparent;
   box-shadow: 0px 5px 5px #e8e8e8;
+}
+.button__commander:hover {
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  box-shadow: 0px 8px 5px #9c9c9c;
 }
 
 /*# sourceMappingURL=style.css.map */

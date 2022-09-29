@@ -2,4 +2,7 @@ body {
   font-family: "Roboto", sans-serif;
   max-width: 375px;
   margin: auto;
+  @media screen and (min-width: 768px) {
+    max-width: none;
+  }
 }

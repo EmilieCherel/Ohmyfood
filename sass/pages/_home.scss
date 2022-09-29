@@ -11,17 +11,37 @@
   &__description {
     background-color: #f6f6f6;
     text-align: center;
-    padding: 10px 50px 50px 50px;
+    padding: 10px 50px 70px 50px;
     p {
       font-size: 14px;
       font-weight: 300;
       margin-bottom: 30px;
     }
+    a {
+      margin-top: 30px;
+    }
   }
 }
 .functioning {
   padding: 30px 20px;
-
+  background-color: white;
+  h2 {
+    @media screen and (min-width: 768px) {
+      text-align: center;
+    }
+  }
+  &__test {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      align-items: center;
+    }
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
   i {
     margin: 0px 20px;
     font-size: 18px;
@@ -30,13 +50,14 @@
   &__item {
     display: flex;
     align-items: center;
+    width: 300px;
     border: 1px solid transparent;
     @include item-shadow;
     border-radius: 15px;
     background-color: #f6f6f6;
     font-size: 12px;
     padding: 15px 15px 15px 0px;
-    margin: 20px 15px;
+    margin: 10px 15px;
     &:hover {
       background-color: #f5edff;
     }
@@ -63,6 +84,27 @@
 .restaurant {
   padding: 30px 20px;
   background-color: #f4f4f4;
+  h2 {
+    @media screen and (min-width: 768px) {
+      text-align: center;
+    }
+  }
+  &__test {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      align-items: center;
+    }
+    @media screen and (min-width: 1024px) {
+      display: grid;
+      grid-template-rows: 250px 250px;
+      grid-template-columns: 335px 335px;
+      grid-gap: 30px 30px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+    }
+  }
   &__card-link {
     text-decoration: none;
     color: black;
