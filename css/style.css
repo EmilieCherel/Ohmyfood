@@ -117,17 +117,17 @@ h1 {
     text-align: center;
   }
 }
-.functioning__test {
+.functioning__section {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
-  .functioning__test {
+  .functioning__section {
     align-items: center;
   }
 }
 @media screen and (min-width: 1024px) {
-  .functioning__test {
+  .functioning__section {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -180,17 +180,17 @@ h1 {
     text-align: center;
   }
 }
-.restaurant__test {
+.restaurant__section {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
-  .restaurant__test {
+  .restaurant__section {
     align-items: center;
   }
 }
 @media screen and (min-width: 1024px) {
-  .restaurant__test {
+  .restaurant__section {
     display: grid;
     grid-template-rows: 250px 250px;
     grid-template-columns: 335px 335px;
@@ -256,10 +256,10 @@ main {
   position: relative;
   bottom: 55px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px 30px 0px 30px;
+  padding: 30px 0px 0px 0px;
   background-color: #f6f6f6;
   border: 1px solid transparent;
   border-radius: 50px 50px 0px 0px;
@@ -272,6 +272,9 @@ main {
 }
 
 .main__byline {
+  margin-left: 10px;
+}
+.main__byline--text {
   font-weight: 300;
   padding-bottom: 5px;
   margin-bottom: 0;
@@ -286,6 +289,14 @@ main {
   display: none;
 }
 
+@media screen and (min-width: 1024px) {
+  .meal__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 .meal {
   display: flex;
   align-content: stretch;
@@ -296,9 +307,14 @@ main {
   background-color: white;
   border: 0px solid transparent;
   border-radius: 15px;
-  margin: 15px 0px;
+  margin: 15px 10px;
   padding-left: 15px;
   box-shadow: 0px 5px 5px #e8e8e8;
+}
+@media screen and (min-width: 1024px) {
+  .meal {
+    width: 310px;
+  }
 }
 .meal h4 {
   margin: 0;
