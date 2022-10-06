@@ -1,0 +1,12 @@
+$anim-dur: 2500ms;
+$num-meal: 10;
+$anim-delay: $anim-dur / $num-meal;
+
+@keyframes meal-apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
