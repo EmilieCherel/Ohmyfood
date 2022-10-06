@@ -20,10 +20,13 @@ main {
   border-radius: 50px 50px 0px 0px;
 }
 .main__heading {
+  width: 375px;
   font-family: "Shrikhand", sans-serif;
   font-size: 25px;
   margin: 10px 0px 10px -15px;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .main__byline {
   margin-left: 10px;
@@ -104,17 +107,18 @@ main {
     }
   }
   &:hover .meal__description {
-    width: calc(100% - 130px);
+    width: calc(100% - 110px);
   }
   &:hover .meal__sidebar {
-    width: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: slide-check 0.5s ease-in-out forwards;
   }
-  &:hover .meal__sidebar i {
+  &:hover .fa-circle-check {
     display: inline;
     color: white;
+    animation: spin 0.5s linear;
   }
 }
 

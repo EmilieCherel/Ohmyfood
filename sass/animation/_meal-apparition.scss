@@ -1,6 +1,8 @@
+//Animation de l'apparition progressive des plats dans les pages menu
+
 $anim-dur: 2500ms;
 $num-meal: 10;
-$anim-delay: $anim-dur / $num-meal;
+$anim-delay: calc($anim-dur / $num-meal);
 
 @keyframes meal-apparition {
   from {

@@ -33,6 +33,22 @@ body {
     opacity: 1;
   }
 }
+@keyframes slide-check {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60px;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 @keyframes vanishing_home {
   0% {
     opacity: 0;
@@ -385,10 +401,13 @@ main {
 }
 
 .main__heading {
+  width: 375px;
   font-family: "Shrikhand", sans-serif;
   font-size: 25px;
   margin: 10px 0px 10px -15px;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .main__byline {
@@ -497,17 +516,18 @@ main {
   font-size: 22px;
 }
 .meal:hover .meal__description {
-  width: calc(100% - 130px);
+  width: calc(100% - 110px);
 }
 .meal:hover .meal__sidebar {
-  width: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: slide-check 0.5s ease-in-out forwards;
 }
-.meal:hover .meal__sidebar i {
+.meal:hover .fa-circle-check {
   display: inline;
   color: white;
+  animation: spin 0.5s linear;
 }
 
 .button__commander {
