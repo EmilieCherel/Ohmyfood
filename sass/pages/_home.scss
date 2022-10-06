@@ -100,38 +100,6 @@
   right: 15px;
   top: 10px;
 }
-@keyframes fulfill-heart {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.heart-empty {
-  font-size: 30px;
-  margin: 0px 30px 0px -10px;
-  position: relative;
-  z-index: 1;
-  &:hover {
-    & .heart-full {
-      animation: fulfill-heart 600ms ease-in-out forwards;
-    }
-  }
-}
-.heart-full {
-  font-size: 30px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to top left, $color-secondary, $color-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 0;
-  z-index: -1;
-}
 .restaurant {
   padding: 30px 20px;
   background-color: #f4f4f4;
