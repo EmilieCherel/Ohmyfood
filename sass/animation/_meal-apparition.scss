@@ -7,8 +7,10 @@ $anim-delay: calc($anim-dur / $num-meal);
 @keyframes meal-apparition {
   from {
     opacity: 0;
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
+    transform: translateY(Opx);
   }
 }
