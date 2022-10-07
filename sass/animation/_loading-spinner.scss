@@ -1,19 +1,21 @@
 //Animation du loading spinner présent sur la page d'accueil
-
+.lds-dual-ring-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .lds-dual-ring {
   display: inline-block;
   position: absolute;
-  top: 10%;
-  right: 30%;
+  margin-top: 400px;
   width: 80px;
   height: 80px;
 }
 .lds-dual-ring:after {
   content: " ";
-  display: block;
+  display: inline-block;
   position: absolute;
-  top: 10%;
-  right: 30%;
   width: 64px;
   height: 64px;
   margin: 8px;

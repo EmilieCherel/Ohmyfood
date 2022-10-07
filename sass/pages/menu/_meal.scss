@@ -1,24 +1,3 @@
-main {
-  background-color: #f6f6f6;
-}
-.main__picture {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-}
-
-.menu-page {
-  position: relative;
-  bottom: 55px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 0px 0px 0px;
-  background-color: #f6f6f6;
-  border: 1px solid transparent;
-  border-radius: 50px 50px 0px 0px;
-}
 .main__heading {
   width: 375px;
   font-family: "Shrikhand", sans-serif;
@@ -40,10 +19,6 @@ main {
     height: 5px;
     border-bottom: 4px solid $color-tertiary;
   }
-}
-
-.fa-circle-check {
-  display: none;
 }
 .meal__section {
   @media screen and (min-width: 1024px) {
@@ -79,6 +54,7 @@ main {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: 0.5s;
   }
   &__price {
     margin: 40px 20px 20px 0px;
@@ -95,54 +71,33 @@ main {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      transition: 0.5s;
     }
   }
   &__sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 0px;
     height: 100%;
     background-color: $color-tertiary;
     border-radius: 0px 15px 15px 0px;
-    i {
-      font-size: 22px;
-    }
+    transition: 0.5s;
   }
   &:hover .meal__description {
     width: calc(100% - 110px);
   }
   &:hover .meal__sidebar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: slide-check 0.5s ease-in-out forwards;
+    transition: 0.5s;
+    width: 80px;
   }
   &:hover .fa-circle-check {
     display: inline;
-    color: white;
-    animation: spin 0.5s linear;
+    rotate: 360deg;
+    transition: 0.5s;
   }
 }
-
-.button__commander {
-  padding: 15px 50px;
-  margin: 40px 0px 0px 0px;
-  background: linear-gradient(
-    to bottom right,
-    $color-secondary,
-    $color-primary
-  );
+.fa-circle-check {
+  font-size: 22px;
   color: white;
-  text-decoration: none;
-  text-align: center;
-  font-size: 16px;
-  border-radius: 30px;
-  border: transparent;
-  @include item-shadow;
-  &:hover {
-    background: linear-gradient(
-      to bottom right,
-      lighten($color-secondary, 5%),
-      lighten($color-primary, 5%)
-    );
-    box-shadow: 0px 8px 5px darken(#e8e8e8, $amount: 30%);
-  }
 }

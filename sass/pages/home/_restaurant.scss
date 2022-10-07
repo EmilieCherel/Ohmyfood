@@ -1,0 +1,79 @@
+.logo-new {
+  width: 80px;
+  color: #2d9b7e;
+  background-color: #99e2d0;
+  text-align: center;
+  padding: 5px;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+.restaurant {
+  padding: 30px 20px;
+  background-color: #f4f4f4;
+  h2 {
+    margin-top: 10px;
+    margin-left: -170px;
+    //A revoir
+    @media screen and (min-width: 768px) {
+      text-align: center;
+    }
+  }
+  &__section {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      align-items: center;
+    }
+    @media screen and (min-width: 1024px) {
+      display: grid;
+      grid-template-rows: 250px 250px;
+      grid-template-columns: 335px 335px;
+      grid-gap: 30px 30px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+    }
+  }
+  &__card-link {
+    text-decoration: none;
+    color: black;
+  }
+  &__card {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    //width: 335px;
+    //height: 250px;
+    border: 1px solid transparent;
+    @include item-shadow;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  &__picture {
+    width: 300px;
+    height: 180px;
+    //width: 335px;
+    //height: 180px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+  }
+  &__description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    &__text {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__name {
+    margin: 5px 10px;
+  }
+  &__location {
+    margin: 0px 10px 10px 10px;
+    font-weight: 300;
+  }
+}

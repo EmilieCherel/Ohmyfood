@@ -1,10 +1,10 @@
 body {
+  max-width: 375px;
   font-family: "Roboto", sans-serif;
   margin: auto;
   padding: auto;
-  position: relative;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 376px) {
   body {
     max-width: none;
   }
@@ -21,6 +21,23 @@ body {
   box-shadow: 0px 5px 5px #e8e8e8;
 }
 .location__explore-button:hover {
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  box-shadow: 0px 8px 5px #9c9c9c;
+}
+
+.button__commander {
+  padding: 15px 50px;
+  margin: 40px 0px 0px 0px;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 30px;
+  border: transparent;
+  box-shadow: 0px 5px 5px #e8e8e8;
+}
+.button__commander:hover {
   background: linear-gradient(to bottom right, #ff93e1, #a16be0);
   box-shadow: 0px 8px 5px #9c9c9c;
 }
@@ -58,22 +75,6 @@ body {
     transform: translateY(Opx);
   }
 }
-@keyframes slide-check {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 60px;
-  }
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
 @keyframes vanishing_home {
   0% {
     opacity: 0;
@@ -86,21 +87,25 @@ body {
   animation: vanishing_home 2s 1.5s backwards;
 }
 
+.lds-dual-ring-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .lds-dual-ring {
   display: inline-block;
   position: absolute;
-  top: 10%;
-  right: 30%;
+  margin-top: 400px;
   width: 80px;
   height: 80px;
 }
 
 .lds-dual-ring:after {
   content: " ";
-  display: block;
+  display: inline-block;
   position: absolute;
-  top: 10%;
-  right: 30%;
   width: 64px;
   height: 64px;
   margin: 8px;
@@ -144,15 +149,17 @@ h1 {
 }
 
 .container {
-  /*max-width: 375px;*/
+  max-width: 375px;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 376px) {
+  .container {
     max-width: none;
-  }*/
+  }
 }
 
 footer {
@@ -165,7 +172,7 @@ footer {
   flex-direction: column;
   align-items: flex-start;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 426px) {
   .omf-footer {
     align-items: center;
   }
@@ -205,7 +212,6 @@ footer {
 }
 
 .location__bar {
-  width: 100%;
   text-align: center;
   color: #353535;
   padding: 10px;
@@ -214,6 +220,10 @@ footer {
 }
 .location__bar i {
   margin: 0px 10px;
+}
+.location__bar-test {
+  background-color: #353535;
+  width: 100%;
 }
 .location__description {
   background-color: #f6f6f6;
@@ -232,23 +242,20 @@ footer {
 .functioning {
   padding: 30px 20px;
   background-color: white;
-  /*h2 {
-    @media screen and (min-width: 768px) {
-      text-align: center;
-    }
-  }*/
 }
 .functioning h2 {
   margin-top: 10px;
-  margin-left: -150px;
+  margin-left: -130px;
+}
+@media screen and (min-width: 768px) {
+  .functioning h2 {
+    text-align: center;
+  }
 }
 .functioning__section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*@media screen and (min-width: 768px) {
-    align-items: center;
-  }*/
 }
 @media screen and (min-width: 1024px) {
   .functioning__section {
@@ -265,7 +272,7 @@ footer {
 .functioning__item {
   display: flex;
   align-items: center;
-  width: 300px;
+  width: 270px;
   border: 1px solid transparent;
   box-shadow: 0px 5px 5px #e8e8e8;
   border-radius: 15px;
@@ -313,10 +320,12 @@ footer {
 }
 .restaurant h2 {
   margin-top: 10px;
-  margin-left: -200px;
-  /*@media screen and (min-width: 768px) {
+  margin-left: -170px;
+}
+@media screen and (min-width: 768px) {
+  .restaurant h2 {
     text-align: center;
-  }*/
+  }
 }
 .restaurant__section {
   display: flex;
@@ -344,7 +353,7 @@ footer {
 }
 .restaurant__card {
   position: relative;
-  width: 335px;
+  width: 300px;
   height: 250px;
   border: 1px solid transparent;
   box-shadow: 0px 5px 5px #e8e8e8;
@@ -352,7 +361,7 @@ footer {
   margin-bottom: 20px;
 }
 .restaurant__picture {
-  width: 335px;
+  width: 300px;
   height: 180px;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
@@ -423,10 +432,6 @@ main {
   border-bottom: 4px solid #99e2d0;
 }
 
-.fa-circle-check {
-  display: none;
-}
-
 @media screen and (min-width: 1024px) {
   .meal__section {
     display: flex;
@@ -487,6 +492,7 @@ main {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: 0.5s;
 }
 .meal__price {
   margin: 40px 20px 20px 0px;
@@ -504,46 +510,34 @@ main {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: 0.5s;
 }
 .meal__sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 0px;
   height: 100%;
   background-color: #99e2d0;
   border-radius: 0px 15px 15px 0px;
-}
-.meal__sidebar i {
-  font-size: 22px;
+  transition: 0.5s;
 }
 .meal:hover .meal__description {
   width: calc(100% - 110px);
 }
 .meal:hover .meal__sidebar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: slide-check 0.5s ease-in-out forwards;
+  transition: 0.5s;
+  width: 80px;
 }
 .meal:hover .fa-circle-check {
   display: inline;
-  color: white;
-  animation: spin 0.5s linear;
+  rotate: 360deg;
+  transition: 0.5s;
 }
 
-.button__commander {
-  padding: 15px 50px;
-  margin: 40px 0px 0px 0px;
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+.fa-circle-check {
+  font-size: 22px;
   color: white;
-  text-decoration: none;
-  text-align: center;
-  font-size: 16px;
-  border-radius: 30px;
-  border: transparent;
-  box-shadow: 0px 5px 5px #e8e8e8;
-}
-.button__commander:hover {
-  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
-  box-shadow: 0px 8px 5px #9c9c9c;
 }
 
 /*# sourceMappingURL=style.css.map */
