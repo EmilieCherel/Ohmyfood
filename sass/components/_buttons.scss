@@ -12,6 +12,7 @@
   border: transparent;
   @include item-shadow;
   &:hover {
+    cursor: grab;
     background: linear-gradient(
       to bottom right,
       lighten($color-secondary, 5%),
@@ -37,6 +38,7 @@
   border: transparent;
   @include item-shadow;
   &:hover {
+    cursor: grab;
     background: linear-gradient(
       to bottom right,
       lighten($color-secondary, 5%),

@@ -11,6 +11,6 @@ $anim-delay: calc($anim-dur / $num-meal);
   }
   to {
     opacity: 1;
-    transform: translateY(Opx);
+    transform: translateY(0px);
   }
 }

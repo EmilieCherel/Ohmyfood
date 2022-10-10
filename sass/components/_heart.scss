@@ -13,6 +13,9 @@
 }
 .heart {
   margin: 0px 20px;
+  &:hover {
+    cursor: grab;
+  }
   &:hover .heart-full {
     transition: 1s;
     opacity: 1;

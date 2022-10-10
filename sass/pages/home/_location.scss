@@ -1,6 +1,5 @@
 .location {
   &__bar {
-    //width: 100%;
     text-align: center;
     color: #353535;
     padding: 10px;
@@ -9,7 +8,7 @@
     i {
       margin: 0px 10px;
     }
-    &-test {
+    &-container {
       background-color: #353535;
       width: 100%;
     }

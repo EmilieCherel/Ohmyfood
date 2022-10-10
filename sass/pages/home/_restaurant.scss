@@ -11,14 +11,6 @@
 .restaurant {
   padding: 30px 20px;
   background-color: #f4f4f4;
-  h2 {
-    margin-top: 10px;
-    margin-left: -170px;
-    //A revoir
-    @media screen and (min-width: 768px) {
-      text-align: center;
-    }
-  }
   &__section {
     display: flex;
     flex-direction: column;
@@ -43,20 +35,24 @@
     position: relative;
     width: 300px;
     height: 250px;
-    //width: 335px;
-    //height: 250px;
     border: 1px solid transparent;
     @include item-shadow;
     border-radius: 20px;
     margin-bottom: 20px;
+    @media screen and (min-width: 375px) {
+      width: 335px;
+      height: 250px;
+    }
   }
   &__picture {
     width: 300px;
     height: 180px;
-    //width: 335px;
-    //height: 180px;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
+    @media screen and (min-width: 375px) {
+      width: 335px;
+      height: 180px;
+    }
   }
   &__description {
     display: flex;
