@@ -27,7 +27,9 @@ body {
 
 .button__commander {
   padding: 15px 50px;
-  margin: 40px 0px 0px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   color: white;
   text-decoration: none;
@@ -59,7 +61,8 @@ body {
 }
 
 .heart {
-  margin: 0px 20px;
+  margin-left: 40px;
+  margin-right: 20px;
 }
 .heart:hover {
   cursor: grab;
@@ -252,6 +255,11 @@ footer {
   padding: 30px 20px;
   background-color: white;
 }
+@media screen and (max-width: 374px) {
+  .functioning {
+    padding: 30px 10px;
+  }
+}
 .functioning__heading-container {
   min-width: 310px;
   display: flex;
@@ -332,6 +340,11 @@ footer {
 .restaurant {
   padding: 30px 20px;
   background-color: #f4f4f4;
+}
+@media screen and (max-width: 374px) {
+  .restaurant {
+    padding: 30px 10px;
+  }
 }
 .restaurant__section {
   display: flex;
@@ -418,24 +431,30 @@ main {
   bottom: 55px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 30px 0px 0px 0px;
   background-color: #f6f6f6;
   border: 1px solid transparent;
   border-radius: 50px 50px 0px 0px;
 }
+@media screen and (min-width: 425px) {
+  .menu-page {
+    align-items: center;
+  }
+}
 
 .main__heading {
   font-family: "Shrikhand", sans-serif;
-  font-size: 22px;
+  font-size: 19px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-left: 5px;
 }
 @media screen and (min-width: 375px) {
   .main__heading {
-    margin-left: -40px;
+    margin-left: 10px;
   }
 }
 
@@ -471,7 +490,7 @@ main {
   background-color: white;
   border: 0px solid transparent;
   border-radius: 15px;
-  margin: 15px 10px;
+  margin: 15px 0px 15px 10px;
   padding-left: 15px;
   box-shadow: 0px 5px 5px #e8e8e8;
   animation: meal-apparition 2500ms ease-in-out both;
