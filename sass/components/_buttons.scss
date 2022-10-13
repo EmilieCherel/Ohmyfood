@@ -20,6 +20,7 @@
     );
     box-shadow: 0px 8px 5px darken(#e8e8e8, $amount: 30%);
   }
+  transition: 0.5s;
 }
 
 .button__commander {
@@ -47,5 +48,6 @@
       lighten($color-primary, 5%)
     );
     box-shadow: 0px 8px 5px darken(#e8e8e8, $amount: 30%);
+    transition: 0.5s;
   }
 }
