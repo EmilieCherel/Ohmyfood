@@ -18,12 +18,12 @@ body {
   border-radius: 30px;
   border: transparent;
   box-shadow: 0px 5px 5px #e8e8e8;
-  transition: 0.5s;
 }
 .location__explore-button:hover {
   cursor: grab;
   background: linear-gradient(to bottom right, #ff93e1, #a16be0);
   box-shadow: 0px 8px 5px #9c9c9c;
+  transition: 0.5s;
 }
 
 .button__commander {
